@@ -51,17 +51,20 @@ describe RSA do
     it "既知の復号結果と一致するかどうか(p=3,q=7,e=5,d=17,M=16)" do
       RSA.code(3*7, 17, [16]).should == [4]
     end
+    it "Tくんの暗号化と復号化の結果と一致するかどうか" do
+      RSA.code(163*107, 5, [12345]).should == [8918]
+      RSA.code(163*107, 6869, [8918]).should == [12345]
+    end
     it "p=3,q=7のとき最小のe,dの組み合わせを導けるかどうか" do
       #pp RSA.find_keypair(1193, 101)
       key_pair = RSA.find_keypair(3, 7, max_keypair: 1).first
       key_pair.first.should == 5
       key_pair.last.should  == 17
     end
-  end
+  end # known_test
 
   describe "#finding_keypair" do
 
   end
-
 
 end
