@@ -63,8 +63,4 @@ describe RSA do
     end
   end # known_test
 
-  describe "#finding_keypair" do
-
-  end
-
 end

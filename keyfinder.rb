@@ -6,7 +6,7 @@ require './lib/rsa.rb'
 print "Please input p,q: "
 input = gets.chomp.split(",")
 if input.length != 2
-  STDERR.puts "input is incorrect. input format requires like '13,19'"
+  STDERR.puts "input is incorrect. input format must be like this: '13,19'"
   exit
 end
 p = input.first.strip.to_i

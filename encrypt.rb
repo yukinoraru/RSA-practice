@@ -23,5 +23,5 @@ decrypt   = RSA.code(n, d, encrypt)
 puts "cipher text: "       + cipher_text
 puts "cipher text(hex): "  + numerical.collect{|n| "%02x" % n}.join(" ")
 puts "encrypt text(hex): " + encrypt.collect  {|n| "%02x" % n}.join(" ")
-puts "decrypt text(hex): " + RSA.unnumbering(decrypt)
+puts "decrypt text: "      + RSA.unnumbering(decrypt)
 
